@@ -1,2 +1,2 @@
 # Library
-for users to see and read book in the personal library and change the details of the books
+Librabry is a simple console-based book management system built using Python lists and dictionaries. It allows users to add books, list all available books, search using full or partial names, mark a selected book as read, update book details, and delete books safely by choosing from matching results. The application handles case-insensitive input and prevents duplicate entries, making it beginner-friendly and easy to understand.
