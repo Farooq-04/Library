@@ -9,13 +9,14 @@ def book_exists(name):
             return True
     return False
 
-def insert_book(name, author):
+def insert_book(name, author, price):
     global books
     if book_exists(name):
         return False
     books.append({
         'name': name,
         'author': author,
+        'price': price,
         'read': False
     })
     return True
@@ -38,3 +39,17 @@ def search_by_status(status):
 def delete_book(book):
     global books
     books.remove(book)
+
+def sort_by_price(low_to_high=True):
+    global books
+    books.sort(key=lambda b: b['price'], reverse=not low_to_high)
+
+def get_min_price_book():
+    if not books:
+        return None
+    return min(books, key=lambda b: b['price'])
+
+def get_max_price_book():
+    if not books:
+        return None
+    return max(books, key=lambda b: b['price'])
